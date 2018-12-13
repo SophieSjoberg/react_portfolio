@@ -10,19 +10,21 @@ import Footer from "./footer"
 import './css/tailwind.css';
 
 const App = () => {
-    return  <div class = "page-wrapper">
-                <div class = "page-content">
-                    <Header/>
-                    <div class= "content-wrapper">
-                        <Switch>
-                            <Route exact path='/' component={Hello}></Route>
-                            <Route exact path='/' component={About}></Route>
-                            <Route exact path='/' component={Projects}></Route>
-                        </Switch>
-                    </div>    
-                    <Footer/>
-                </div> 
-            </div>     
+    return (
+        <div className="page-wrapper">
+            <div className="page-content">
+                <Header />
+                <div className="content-wrapper">
+                    <Switch>
+                        <Route exact path='/' component={Hello}></Route>
+                        <Route exact path='/about' component={About}></Route>
+                        <Route exact path='/projects' component={Projects}></Route>
+                    </Switch>
+                </div>
+                <Footer />
+            </div >
+        </div >
+    )         
 };
 
 ReactDOM.render((

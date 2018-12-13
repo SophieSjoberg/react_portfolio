@@ -1,21 +1,22 @@
 import React, { Component } from "react"
+import ProjectCard from "./ProjectCard"
+import axios from "axios"
 
 class Projects extends Component {
     constructor() {
         super();
         this.state = {
-            projects: [
-                        {
-                            "id": 1,
-                            "name": "Dishly"
-                        },
-                        {
-                            "id": 2,
-                            "name": "Timber"
-                        }
-
-                    ]
+            projects: []
         };
+    }
+
+    componentDidMount() {
+        axios.get('./src/data/projects.json')
+            .then(response => {
+                this.setState({
+                    projects: response.data
+                })
+            })
     }
 
     render() {
@@ -26,9 +27,9 @@ class Projects extends Component {
             projectsList = projects.map(project => {
                 return (
                     <div key={project.id}>
-                        <h3 className="content-text">
-                            {project.name}
-                        </h3>
+                        <div key={project.id} className="min-h-900 my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+                        <ProjectCard project={project} />
+                        </div>
                     </div>
                 )
             })

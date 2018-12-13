@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Dishly",
+        "image": "https://source.unsplash.com/1Shk_PkNkNw/240x200",
+        "description": "A restaurant ordering platform",
+        "link": "https://github.com/SophieSjoberg/jak-sie-masz-slowfood"
+    },
+    {
+        "id": 2,
+        "name": "Timber"
+    },
+    {
+        "id": 3,
+        "name": "BMI Challenge"
+    },
+    {
+        "id": 4,
+        "name": "Royale with Cheese"
+    },
+    {
+        "id": 5,
+        "name": "Virtual ATM"
+    }
+
+]
